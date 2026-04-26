@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biriq Store - G2Bulk Mini Test</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="badge">Biriq Store Mini API Test</p>
+        <h1>G2Bulk Frontend + Backend Test</h1>
+        <p class="muted">Dooro game, check garee Player ID, dooro product, kadib samee test order.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>1. Door Game</h2>
+      <div class="row">
+        <select id="gameSelect">
+          <option value="">Loading games...</option>
+        </select>
+        <button id="loadProductsBtn">Load Products</button>
+      </div>
+      <pre id="gamesOutput"></pre>
+    </section>
+
+    <section class="card">
+      <h2>2. Check Player ID</h2>
+      <div class="grid">
+        <input id="playerIdInput" placeholder="Player ID / UID" />
+        <input id="serverIdInput" placeholder="Server ID haddii loo baahdo" />
+        <button id="checkPlayerBtn">Check Player</button>
+      </div>
+      <div id="playerResult" class="result">Player name wuxuu kasoo muuqan doonaa halkan.</div>
+    </section>
+
+    <section class="card">
+      <h2>3. Products</h2>
+      <p class="muted">Products-ka API-ga kasoo baxa: product_id, catalogue_name, api_price.</p>
+      <div id="productsList" class="products"></div>
+    </section>
+
+    <section class="card">
+      <h2>4. Test Order</h2>
+      <div class="summary">
+        <p><b>Game:</b> <span id="sumGame">-</span></p>
+        <p><b>Player:</b> <span id="sumPlayer">-</span></p>
+        <p><b>Product:</b> <span id="sumProduct">-</span></p>
+        <p><b>API Price:</b> $<span id="sumApiPrice">0</span></p>
+      </div>
+
+      <input id="phoneInput" placeholder="Customer phone example: 061xxxxxxx" />
+      <input id="amountPaidInput" placeholder="Amount paid example: 2" />
+
+      <button id="createOrderBtn" class="danger">Create Test Order</button>
+      <pre id="orderOutput"></pre>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
