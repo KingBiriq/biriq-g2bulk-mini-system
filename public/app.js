@@ -140,7 +140,11 @@ async function checkPlayer() {
     data.data?.player_name ||
     "";
 
-  playerResult.textContent = JSON.stringify(data, null, 2);
+  if (data.valid === "valid" || data.valid === true) {
+    playerResult.innerHTML = `✅ Player Found: <b>${data.name}</b>`;
+  } else {
+    playerResult.innerHTML = `❌ Player ID lama helin. Fadlan hubi ID-ga.`;
+  }
   updateSummary();
 }
 
